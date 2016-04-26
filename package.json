@@ -8,7 +8,7 @@
   },
   "preferGlobal": true,
   "scripts": {
-    "test": "./node_modules/.bin/jasmine-node spec/"
+    "test": "jasmine-node spec/"
   },
   "keywords": [
     "generate",
@@ -31,5 +31,13 @@
   },
   "devDependencies": {
     "jasmine-node": "^1.14.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanhauhau/generator-badge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tanhauhau/generator-badge/issues"
+  },
+  "homepage": "https://github.com/tanhauhau/generator-badge#readme"
 }
