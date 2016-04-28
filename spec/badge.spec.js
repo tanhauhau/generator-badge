@@ -62,5 +62,16 @@ describe('Badge', function(){
             alt: 'npm download',
             description: 'total npm downloads',
         }]);
-    })
+    });
+
+    it('should return nothing on empty string', function(){
+        expect(badge('')).toEqual([]);
+    });
+
+    it('should return nothing when no match', function(){
+        expect(badge('*')).toEqual([]);
+        expect(badge('wrong')).toEqual([]);
+        expect(badge('wrong-match')).toEqual([]);
+        expect(badge('apm-match')).toEqual([]);
+    });
 })
