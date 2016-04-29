@@ -74,4 +74,39 @@ describe('Badge', function(){
         expect(badge('wrong-match')).toEqual([]);
         expect(badge('apm-match')).toEqual([]);
     });
+
+    it('should return all', function(){
+        expect(badge('npm')).toEqual([{
+            field: ['name'],
+            slogan: 'npm is the package manager for node.js',
+            link: 'https://www.npmjs.com/package/{{name}}',
+            format: 'https://img.shields.io/npm/v/{{name}}.svg',
+            alt: 'npm version',
+            description: 'npm version number',
+        },
+        {
+            field: ['name'],
+            slogan: 'npm is the package manager for node.js',
+            link: 'https://www.npmjs.com/package/{{name}}',
+            format: 'https://img.shields.io/npm/l/{{name}}.svg',
+            alt: 'npm license',
+            description: 'npm license',
+        },
+        {
+            field: ['name'],
+            slogan: 'npm is the package manager for node.js',
+            link: 'https://www.npmjs.com/package/{{name}}',
+            alt: 'npm download',
+            format: 'https://img.shields.io/npm/dm/{{name}}.svg',
+            description: 'npm download per month',
+        },
+        {
+            field: ['name'],
+            slogan: 'npm is the package manager for node.js',
+            link: 'https://www.npmjs.com/package/{{name}}',
+            alt: 'npm download',
+            format: 'https://img.shields.io/npm/dt/{{name}}.svg',
+            description: 'total npm downloads',
+        }]);
+    })
 })
