@@ -6,7 +6,7 @@ describe('Badge', function(){
         expect(badge('gitter')).toEqual([{
             slogan: 'Chat, for Github',
             format: 'https://img.shields.io/gitter/room/{{repo-username}}/{{repository}}.svg',
-            field: ['repo-username', 'repository'],
+            field: ['repo-username', 'repo-name'],
             alt: 'Gitter',
             description: 'Gitter',
             link: 'https://gitter.im/{{repo-username}}/{{repository}}',
@@ -15,7 +15,7 @@ describe('Badge', function(){
 
     it('should return default', function(){
         expect(badge('david')).toEqual([{
-            field: ['repo-username', 'repository'],
+            field: ['repo-username', 'repo-name'],
             slogan: 'Watching your node.js dependencies.',
             alt: 'david dependency',
             format: 'https://img.shields.io/david/{{repo-username}}/{{repository}}.svg',
@@ -108,5 +108,15 @@ describe('Badge', function(){
             format: 'https://img.shields.io/npm/dt/{{name}}.svg',
             description: 'total npm downloads',
         }]);
+    });
+
+    it('should merge fields', function(){
+        expect(badge('travis-branch')).toEqual([{
+            field: ['repo-username', 'repo-name', 'repo-branch'],
+            slogan: 'Build apps with confidence.',
+            format: 'https://img.shields.io/travis/{{repo-username}}/{{repository}}/{{branch}}.svg',
+            link: 'https://travis-ci.org/{{repo-username}}/{{repository}}/{{branch}}',
+            description: 'Travis build status for branch'
+        }])
     })
 })
