@@ -118,5 +118,64 @@ describe('Badge', function(){
             link: 'https://travis-ci.org/{{repo-username}}/{{repository}}/{{branch}}',
             description: 'Travis build status for branch'
         }])
-    })
+    });
+
+    it('should return all with promise', function(){
+        var all = badge.all(['david', 'gitter']);
+        expect(all).toEqual(jasmine.any(Object));
+        expect(all.rejected).toEqual(jasmine.any(Array));
+        expect(all.rejected.length).toEqual(0);
+        expect(all.badges).toEqual(jasmine.any(Array));
+        expect(all.badges.length).toEqual(2);
+    });
+
+    it('should return all with promise with rejected', function(){
+        var all = badge.all(['a', 'gitter']);
+        expect(all).toEqual(jasmine.any(Object));
+        expect(all.rejected).toEqual(jasmine.any(Array));
+        expect(all.rejected.length).toEqual(1);
+        expect(all.rejected).toEqual(['a']);
+        expect(all.badges).toEqual(jasmine.any(Array));
+        expect(all.badges.length).toEqual(1);
+    });
+
+    it('should return all with promise with uniq', function(){
+        var all = badge.all(['npm', 'npm-license']);
+        expect(all).toEqual(jasmine.any(Object));
+        expect(all.rejected).toEqual(jasmine.any(Array));
+        expect(all.rejected).toEqual([]);
+        expect(all.badges).toEqual(jasmine.any(Array));
+        expect(all.badges).toEqual([{
+            field: ['name'],
+            slogan: 'npm is the package manager for node.js',
+            link: 'https://www.npmjs.com/package/{{name}}',
+            format: 'https://img.shields.io/npm/v/{{name}}.svg',
+            alt: 'npm version',
+            description: 'npm version number',
+        },
+        {
+            field: ['name'],
+            slogan: 'npm is the package manager for node.js',
+            link: 'https://www.npmjs.com/package/{{name}}',
+            format: 'https://img.shields.io/npm/l/{{name}}.svg',
+            alt: 'npm license',
+            description: 'npm license',
+        },
+        {
+            field: ['name'],
+            slogan: 'npm is the package manager for node.js',
+            link: 'https://www.npmjs.com/package/{{name}}',
+            alt: 'npm download',
+            format: 'https://img.shields.io/npm/dm/{{name}}.svg',
+            description: 'npm download per month',
+        },
+        {
+            field: ['name'],
+            slogan: 'npm is the package manager for node.js',
+            link: 'https://www.npmjs.com/package/{{name}}',
+            alt: 'npm download',
+            format: 'https://img.shields.io/npm/dt/{{name}}.svg',
+            description: 'total npm downloads',
+        }]);
+    });
 })
