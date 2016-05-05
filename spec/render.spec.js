@@ -32,4 +32,7 @@ describe('Render', function(){
         expect(render('{{  a  }} asdf {{ a}} {{b}}', {a:1, b:2})).toEqual('1 asdf 1 2');
         expect(render('{{  a  }} {{a}}sdf{{c}} {{ a}} {{b}}', {a:1, b:3, c:4})).toEqual('1 1sdf4 1 3');
     });
+    it('should ok with alphabets and hyphen', function(){
+        expect(render('{{a-b}} asdf {{bD}}', {'a-b':1, bD:2})).toEqual('1 asdf 2');
+    });
 })
