@@ -10,6 +10,7 @@ describe('Badge', function(){
             alt: 'Gitter',
             description: 'Gitter',
             link: 'https://gitter.im/{{repo-username}}/{{repo-name}}',
+            _name: 'gitter',
         }]);
     });
 
@@ -20,6 +21,7 @@ describe('Badge', function(){
             alt: 'david dependency',
             format: 'https://img.shields.io/david/{{repo-username}}/{{repo-name}}.svg',
             description: 'nodejs dependency',
+            _name: 'david-default',
         }])
     });
 
@@ -31,6 +33,7 @@ describe('Badge', function(){
             format: 'https://img.shields.io/apm/v/{{name}}.svg',
             alt: 'apm version',
             description: 'apm version number',
+            _name: 'apm-version',
         }]);
     });
 
@@ -42,6 +45,7 @@ describe('Badge', function(){
             alt: 'apm download',
             format: 'https://img.shields.io/apm/dm/{{name}}.svg',
             description: 'apm download per month',
+            _name: 'apm-download-month',
         }]);
     });
 
@@ -53,6 +57,7 @@ describe('Badge', function(){
             alt: 'npm download',
             format: 'https://img.shields.io/npm/dm/{{name}}.svg',
             description: 'npm download per month',
+            _name: 'npm-download-month',
         },
         {
             field: ['name'],
@@ -61,6 +66,7 @@ describe('Badge', function(){
             format: 'https://img.shields.io/npm/dt/{{name}}.svg',
             alt: 'npm download',
             description: 'total npm downloads',
+            _name: 'npm-download-total',
         }]);
     });
 
@@ -83,6 +89,7 @@ describe('Badge', function(){
             format: 'https://img.shields.io/npm/v/{{name}}.svg',
             alt: 'npm version',
             description: 'npm version number',
+            _name: 'npm-version',
         },
         {
             field: ['name'],
@@ -91,6 +98,7 @@ describe('Badge', function(){
             format: 'https://img.shields.io/npm/l/{{name}}.svg',
             alt: 'npm license',
             description: 'npm license',
+            _name: 'npm-license',
         },
         {
             field: ['name'],
@@ -99,6 +107,7 @@ describe('Badge', function(){
             alt: 'npm download',
             format: 'https://img.shields.io/npm/dm/{{name}}.svg',
             description: 'npm download per month',
+            _name: 'npm-download-month',
         },
         {
             field: ['name'],
@@ -107,6 +116,7 @@ describe('Badge', function(){
             alt: 'npm download',
             format: 'https://img.shields.io/npm/dt/{{name}}.svg',
             description: 'total npm downloads',
+            _name: 'npm-download-total',
         }]);
     });
 
@@ -117,7 +127,8 @@ describe('Badge', function(){
             format: 'https://img.shields.io/travis/{{repo-username}}/{{repo-name}}/{{repo-branch}}.svg',
             link: 'https://travis-ci.org/{{repo-username}}/{{repo-name}}/{{repo-branch}}',
             description: 'Travis build status for branch',
-            alt: 'travis status'
+            alt: 'travis status',
+            _name: 'travis-branch',
         }])
     });
 
@@ -153,6 +164,7 @@ describe('Badge', function(){
             format: 'https://img.shields.io/npm/v/{{name}}.svg',
             alt: 'npm version',
             description: 'npm version number',
+            _name: 'npm-version',
         },
         {
             field: ['name'],
@@ -161,6 +173,7 @@ describe('Badge', function(){
             format: 'https://img.shields.io/npm/l/{{name}}.svg',
             alt: 'npm license',
             description: 'npm license',
+            _name: 'npm-license',
         },
         {
             field: ['name'],
@@ -169,6 +182,7 @@ describe('Badge', function(){
             alt: 'npm download',
             format: 'https://img.shields.io/npm/dm/{{name}}.svg',
             description: 'npm download per month',
+            _name: 'npm-download-month',
         },
         {
             field: ['name'],
@@ -177,6 +191,7 @@ describe('Badge', function(){
             alt: 'npm download',
             format: 'https://img.shields.io/npm/dt/{{name}}.svg',
             description: 'total npm downloads',
+            _name: 'npm-download-total',
         }]);
     });
     it('should list badge', function(){
@@ -216,7 +231,7 @@ describe('Badge', function(){
               description: 'Gitter'
             }
         ];
-        for(var i in shouldHave){
+        for(var i in shouldContain){
             expect(badge.list()).toContain(shouldContain[i]);
         }
     });
