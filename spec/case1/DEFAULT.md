@@ -1,8 +1,6 @@
 # generator-badge
 
 <!-- badge -->
-[![travis status](https://img.shields.io/travis/tanhauhau/awesome-project.svg)](https://travis-ci.org/tanhauhau/awesome-project)
-[![npm version](https://img.shields.io/npm/v/awesome-project.svg)](https://www.npmjs.com/package/awesome-project)
 <!-- endbadge -->
 
 > Generate badges for your readme
