@@ -54,7 +54,7 @@ Field: `name`
 
 # [david](http://david-dm.org/)
 
-1. David dependency
+1. David dependency  
 [![david dependency](https://img.shields.io/david/tanhauhau/generator-badge.svg)]()  
 Name: `david` or `david-default`  
 Field: `repo-username`, `repo-name`  
