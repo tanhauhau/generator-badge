@@ -1,6 +1,15 @@
 # generator-badge
 
-# ⚠️ WORK IN PROGRESS ⚠️
+<!-- badge -->
+[![travis status](https://img.shields.io/travis/tanhauhau/generator-badge.svg)](https://travis-ci.org/tanhauhau/generator-badge)
+[![npm version](https://img.shields.io/npm/v/generator-badge.svg)](https://www.npmjs.com/package/generator-badge)
+[![npm license](https://img.shields.io/npm/l/generator-badge.svg)](https://www.npmjs.com/package/generator-badge)
+[![npm download](https://img.shields.io/npm/dm/generator-badge.svg)](https://www.npmjs.com/package/generator-badge)
+[![npm download](https://img.shields.io/npm/dt/generator-badge.svg)](https://www.npmjs.com/package/generator-badge)
+[![david dependency](https://img.shields.io/david/tanhauhau/generator-badge.svg)]()
+[![david dev-dependency](https://img.shields.io/david/dev/tanhauhau/generator-badge.svg)]()
+
+<!-- endbadge -->
 
 > Generate badges for your readme
 
@@ -10,39 +19,95 @@
 $ npm install --save --global generator-badge
 ```
 
-## Usage
-
-*Expected Usage:* 
+## Example
 
 **BEFORE**
 
 README.md:
 
-```
+```markdown
 # MY-AWESOME-PROJECT
 <!-- badge -->
 <!-- endbadge -->
 ```
 
-**THEN**
+**THEN YOU DO**
 
-Terminal: 
+Terminal:
 
 ```bash
 awesome-project$ badge install travis npm-version
 ```
 
-**AFTER**
+**WHAT YOU GET**
 
 README.md:
 
-```
+```markdown
 # MY-AWESOME-PROJECT
 <!-- badge -->
 [![travis](https://img.shields.io/travis/tanhauhau/awesome-project.svg)](https://travis-ci.org/tanhauhau/awesome-project)
 [![npm-version](https://img.shields.io/npm/v/awesome-project.svg)](https://www.npmjs.com/package/awesome-project)
 <!-- endbadge -->
 ```
+
+## Usage
+
+**Install badges**
+
+```bash
+$ badge install <badges> [<args>]
+```
+
+You can specify required field values into arguments:
+
+```bash
+$ badge install travis --repo-username=tanhauhau --repo-name=awesome-project
+```
+
+For field values that is missing, `badge` will prompt you to enter.
+
+```bash
+$ badge install travis
+  Inferring information needed...
+  ? repo-username: tanhauhau
+  ? repo-name: awesome-project
+  Preparing the badges...
+  Looking for README...
+  Injecting badges into README...
+  Done :)
+```
+
+**List of all badges available**
+
+```bash
+$ badge list
+```
+
+**Help**
+
+```bash
+$ badge help <badge>
+$ badge help travis
+ travis-default
+ Build apps with confidence.
+ Description : Travis build status of master branch
+ Fields      : repo-username, repo-name
+```
+
+## Todo List
+
+- [ ] Find README of various format: markdown, textile, rdoc, rst, pod, html
+- [ ] Inferring git, svn repo information
+- [ ] Storing global preferences, eg: able to remember author name in global
+- [ ] Storing local preferences, eg: able to remember repo info in local package
+- [ ] Filename as argument
+- [ ] [More badges available](https://github.com/tanhauhau/generator-badge/blob/master/doc/list.md)
+
+## Badge credits to
+
+[![shields.io](http://shields.io/logo.svg)](http://shields.io)
+
 
 ## Contributing
 
