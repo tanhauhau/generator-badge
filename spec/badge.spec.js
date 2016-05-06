@@ -5,11 +5,11 @@ describe('Badge', function(){
     it('should return level 1', function(){
         expect(badge('gitter')).toEqual([{
             slogan: 'Chat, for Github',
-            format: 'https://img.shields.io/gitter/room/{{repo-username}}/{{repository}}.svg',
+            format: 'https://img.shields.io/gitter/room/{{repo-username}}/{{repo-name}}.svg',
             field: ['repo-username', 'repo-name'],
             alt: 'Gitter',
             description: 'Gitter',
-            link: 'https://gitter.im/{{repo-username}}/{{repository}}',
+            link: 'https://gitter.im/{{repo-username}}/{{repo-name}}',
         }]);
     });
 
@@ -18,7 +18,7 @@ describe('Badge', function(){
             field: ['repo-username', 'repo-name'],
             slogan: 'Watching your node.js dependencies.',
             alt: 'david dependency',
-            format: 'https://img.shields.io/david/{{repo-username}}/{{repository}}.svg',
+            format: 'https://img.shields.io/david/{{repo-username}}/{{repo-name}}.svg',
             description: 'nodejs dependency',
         }])
     });
@@ -114,8 +114,8 @@ describe('Badge', function(){
         expect(badge('travis-branch')).toEqual([{
             field: ['repo-username', 'repo-name', 'repo-branch'],
             slogan: 'Build apps with confidence.',
-            format: 'https://img.shields.io/travis/{{repo-username}}/{{repository}}/{{branch}}.svg',
-            link: 'https://travis-ci.org/{{repo-username}}/{{repository}}/{{branch}}',
+            format: 'https://img.shields.io/travis/{{repo-username}}/{{repo-name}}/{{repo-branch}}.svg',
+            link: 'https://travis-ci.org/{{repo-username}}/{{repo-name}}/{{repo-branch}}',
             description: 'Travis build status for branch'
         }])
     });
