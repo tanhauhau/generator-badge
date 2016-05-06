@@ -179,4 +179,45 @@ describe('Badge', function(){
             description: 'total npm downloads',
         }]);
     });
+    it('should list badge', function(){
+        //preliminary list
+        var shouldContain = [
+            { name: 'travis',
+              include: [
+                  { name: 'default', description: 'Travis build status of master branch' },
+                  { name: 'branch', description: 'Travis build status for branch' }
+              ]},
+            { name: 'npm',
+              include: [
+                  { name: 'version', description: 'npm version number' },
+                  { name: 'license', description: 'npm license' },
+                  { name: 'download',
+                    include: [
+                        { name: 'month', description: 'npm download per month' },
+                        { name: 'total', description: 'total npm downloads' }
+                    ]}
+              ]},
+            { name: 'apm',
+              include: [
+                  { name: 'version', description: 'apm version number' },
+                  { name: 'license', description: 'apm license' },
+                  { name: 'download',
+                    include: [
+                        { name: 'month', description: 'apm download per month' },
+                        { name: 'total', description: 'total apm downloads' }
+                    ]}
+              ]},
+            { name: 'david',
+              include: [
+                  { name: 'default', description: 'nodejs dependency' },
+                  { name: 'development', description: 'nodejs development dependency' }
+              ]},
+            { name: 'gitter',
+              description: 'Gitter'
+            }
+        ];
+        for(var i in shouldHave){
+            expect(badge.list()).toContain(shouldContain[i]);
+        }
+    });
 })
