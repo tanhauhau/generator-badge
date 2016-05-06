@@ -116,7 +116,8 @@ describe('Badge', function(){
             slogan: 'Build apps with confidence.',
             format: 'https://img.shields.io/travis/{{repo-username}}/{{repo-name}}/{{repo-branch}}.svg',
             link: 'https://travis-ci.org/{{repo-username}}/{{repo-name}}/{{repo-branch}}',
-            description: 'Travis build status for branch'
+            description: 'Travis build status for branch',
+            alt: 'travis status'
         }])
     });
 
