@@ -38,14 +38,14 @@ describe('Badge', function(){
     });
 
     it('should return nested nested', function(){
-        expect(badge('apm-download-month')).toEqual([{
+        expect(badge('apm-download-total')).toEqual([{
             field: ['name'],
             slogan: 'Packages make Atom do amazing things.',
             link: 'https://atom.io/packages/{{name}}',
             alt: 'apm download',
-            format: 'https://img.shields.io/apm/dm/{{name}}.svg',
-            description: 'apm download per month',
-            _name: 'apm-download-month',
+            format: 'https://img.shields.io/apm/dt/{{name}}.svg',
+            description: 'total apm downloads',
+            _name: 'apm-download-total',
         }]);
     });
 
@@ -218,14 +218,15 @@ describe('Badge', function(){
                   { name: 'license', description: 'apm license' },
                   { name: 'download',
                     include: [
-                        { name: 'month', description: 'apm download per month' },
                         { name: 'total', description: 'total apm downloads' }
                     ]}
               ]},
             { name: 'david',
               include: [
                   { name: 'default', description: 'nodejs dependency' },
-                  { name: 'development', description: 'nodejs development dependency' }
+                  { name: 'development', description: 'nodejs development dependency' },
+                  { name: 'optional', description: 'nodejs optional dependency' },
+                  { name: 'peer', description: 'nodejs peer dependency' },
               ]},
             { name: 'gitter',
               description: 'Gitter'
