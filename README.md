@@ -119,7 +119,13 @@ $ badge help travis
  Fields      : repo-username, repo-name
 ```
 
+**Clear**
 
+```bash
+$ badge clear
+```
+
+Remove all badges
 
 ## Badges Available
 
