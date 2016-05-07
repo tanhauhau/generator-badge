@@ -121,7 +121,7 @@ Name: `github-followers`
 Field: `repo-username`  
 
 2. GitHub forks  
-[![GitHub forks](https://img.shields.io/github/forks/tanhauhau/generator-badge.svg?style=social&label=Fork)](https://github.com/tanhauhau/generator-badge)  
+[![GitHub forks](https://img.shields.io/github/forks/tanhauhau/generator-badge.svg?style=social&label=Fork)](https://github.com/tanhauhau/generator-badge/fork)  
 Name: `github-forks`  
 Field: `repo-username`, `repo-name`  
 
@@ -133,6 +133,11 @@ Field: `repo-username`, `repo-name`
 4. GitHub watchers  
 [![GitHub watchers](https://img.shields.io/github/watchers/tanhauhau/generator-badge.svg?style=social&label=Watch)](https://github.com/tanhauhau/generator-badge)  
 Name: `github-watchers`  
+Field: `repo-username`, `repo-name`  
+
+5. GitHub issues  
+[![GitHub issues](https://img.shields.io/github/issues/tanhauhau/generator-badge.svg)](https://github.com/tanhauhau/generator-badge/issues)  
+Name: `github-issues`  
 Field: `repo-username`, `repo-name`  
 
 
