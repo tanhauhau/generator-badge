@@ -33,14 +33,6 @@ README.md:
 ```markdown
 # MY-AWESOME-PROJECT
 <!-- badge -->
-[![wercker status](https://app.wercker.com/status/15d1bfe55ec05c73b82704c4912f4323/s)](https://app.wercker.com/project/bykey/15d1bfe55ec05c73b82704c4912f4323)
-[![wercker status](https://app.wercker.com/status/15d1bfe55ec05c73b82704c4912f4323/m)](https://app.wercker.com/project/bykey/15d1bfe55ec05c73b82704c4912f4323)
-[![appveyor status](https://img.shields.io/travis/tanhauhau/generator-badge.svg)](https://ci.appveyor.com/project/tanhauhau/generator-badge)
-[![GitHub followers](https://img.shields.io/github/followers/tanhauhau.svg?style=social&label=Follow)](https://github.com/tanhauhau/generator-badge)
-[![GitHub forks](https://img.shields.io/github/forks/tanhauhau/generator-badge.svg?style=social&label=Fork)](https://github.com/tanhauhau/generator-badge)
-[![GitHub stars](https://img.shields.io/github/stars/tanhauhau/generator-badge.svg?style=social&label=Star)](https://github.com/tanhauhau/generator-badge)
-[![GitHub watchers](https://img.shields.io/github/watchers/tanhauhau/generator-badge.svg?style=social&label=Watch)](https://github.com/tanhauhau/generator-badge)
-[![GitHub followers](https://img.shields.io/github/followers/tanhauhau.svg?style=social&label=Follow)](https://github.com/tanhauhau/)
 <!-- endbadge -->
 ```
 
@@ -61,14 +53,6 @@ README.md:
 <!-- badge -->
 [![travis](https://img.shields.io/travis/tanhauhau/awesome-project.svg)](https://travis-ci.org/tanhauhau/awesome-project)
 [![npm-version](https://img.shields.io/npm/v/awesome-project.svg)](https://www.npmjs.com/package/awesome-project)
-[![wercker status](https://app.wercker.com/status/15d1bfe55ec05c73b82704c4912f4323/s)](https://app.wercker.com/project/bykey/15d1bfe55ec05c73b82704c4912f4323)
-[![wercker status](https://app.wercker.com/status/15d1bfe55ec05c73b82704c4912f4323/m)](https://app.wercker.com/project/bykey/15d1bfe55ec05c73b82704c4912f4323)
-[![appveyor status](https://img.shields.io/travis/tanhauhau/generator-badge.svg)](https://ci.appveyor.com/project/tanhauhau/generator-badge)
-[![GitHub followers](https://img.shields.io/github/followers/tanhauhau.svg?style=social&label=Follow)](https://github.com/tanhauhau/generator-badge)
-[![GitHub forks](https://img.shields.io/github/forks/tanhauhau/generator-badge.svg?style=social&label=Fork)](https://github.com/tanhauhau/generator-badge)
-[![GitHub stars](https://img.shields.io/github/stars/tanhauhau/generator-badge.svg?style=social&label=Star)](https://github.com/tanhauhau/generator-badge)
-[![GitHub watchers](https://img.shields.io/github/watchers/tanhauhau/generator-badge.svg?style=social&label=Watch)](https://github.com/tanhauhau/generator-badge)
-[![GitHub followers](https://img.shields.io/github/followers/tanhauhau.svg?style=social&label=Follow)](https://github.com/tanhauhau/)
 <!-- endbadge -->
 ```
 
