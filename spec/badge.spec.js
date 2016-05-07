@@ -236,4 +236,16 @@ describe('Badge', function(){
             expect(badge.list()).toContain(shouldContain[i]);
         }
     });
+    it('should sublist badge', function(){
+        expect(badge.list('npm')).toEqual([{ name: 'npm',
+          include: [
+              { name: 'version', description: 'npm version number' },
+              { name: 'license', description: 'npm license' },
+              { name: 'download',
+                include: [
+                    { name: 'month', description: 'npm download per month' },
+                    { name: 'total', description: 'total npm downloads' }
+                ]}
+          ]}]);
+    });
 })
