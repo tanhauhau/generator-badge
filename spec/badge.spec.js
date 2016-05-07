@@ -206,7 +206,7 @@ describe('Badge', function(){
               include: [
                   { name: 'version', description: 'npm version number' },
                   { name: 'license', description: 'npm license' },
-                  { name: 'download',
+                  { name: 'download', description: 'Download count',
                     include: [
                         { name: 'month', description: 'npm download per month' },
                         { name: 'total', description: 'total npm downloads' }
@@ -216,7 +216,7 @@ describe('Badge', function(){
               include: [
                   { name: 'version', description: 'apm version number' },
                   { name: 'license', description: 'apm license' },
-                  { name: 'download',
+                  { name: 'download', description: 'Download count',
                     include: [
                         { name: 'total', description: 'total apm downloads' }
                     ]}
@@ -241,7 +241,7 @@ describe('Badge', function(){
           include: [
               { name: 'version', description: 'npm version number' },
               { name: 'license', description: 'npm license' },
-              { name: 'download',
+              { name: 'download', description: 'Download count',
                 include: [
                     { name: 'month', description: 'npm download per month' },
                     { name: 'total', description: 'total npm downloads' }

@@ -87,8 +87,26 @@ $ badge install travis
 **List of all badges available**
 
 ```bash
+$ badge list <badges>
+```
+
+You can list all the badges available
+
+```bash
 $ badge list
 ```
+
+![listing](https://raw.githubusercontent.com/tanhauhau/generator-badge/master/img/screenshot_list_all.png)
+
+Or list specified badges only
+
+```bash
+$ badge list apm tavis
+```
+
+![listing](https://raw.githubusercontent.com/tanhauhau/generator-badge/master/img/screenshot_list.png)
+
+*Note typo in Travis.*
 
 **Help**
 
@@ -100,6 +118,12 @@ $ badge help travis
  Description : Travis build status of master branch
  Fields      : repo-username, repo-name
 ```
+
+
+
+## Badges Available
+
+See a list of badges available [here](https://github.com/tanhauhau/generator-badge/blob/master/doc/list.md).
 
 ## Todo List
 
