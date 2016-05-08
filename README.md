@@ -76,6 +76,22 @@ For field values that is missing, `badge` will prompt you to enter.
 
 ![install](https://raw.githubusercontent.com/tanhauhau/generator-badge/master/img/screenshot_install.png)
 
+\***All the information gathered will be stored at .badge.json in the same folder as the nearest README.**
+
+**Other options available**
+
+`--no-cache`  
+Do not use information stored in `.badge.json`.
+
+`--ignore-warning`  
+Install badges even if some badges specified does not exists.
+
+**List of installed badge(s)**
+
+```bash
+$ badge installed
+```
+
 **List of all badges available**
 
 ```bash
@@ -90,15 +106,21 @@ $ badge list
 
 ![listing](https://raw.githubusercontent.com/tanhauhau/generator-badge/master/img/screenshot_list_all.png)
 
-Or list specified badges only
+**List of badges that will be installed**
 
 ```bash
+$ badge list <badges>
+```
+
+Example
+
+```bash 
 $ badge list apm tavis
 ```
 
 ![listing](https://raw.githubusercontent.com/tanhauhau/generator-badge/master/img/screenshot_list.png)
 
-*Note typo in Travis.*
+*Note typo in Travis. This command shows what will be installed, a typo in Tavis will install nothing*
 
 **Help**
 
@@ -123,9 +145,9 @@ See a list of badges available [here](https://github.com/tanhauhau/generator-bad
 ## Todo List
 
 - [ ] Find README of various format: markdown, textile, rdoc, rst, pod, html
-- [ ] Inferring git, svn repo information
+- [ ] Inferring ~~git~~, svn repo information
 - [ ] Storing global preferences, eg: able to remember author name in global
-- [ ] Storing local preferences, eg: able to remember repo info in local package
+- [x] Storing local preferences, eg: able to remember repo info in local package
 - [ ] Filename as argument
 - [ ] [More badges available](https://github.com/tanhauhau/generator-badge/blob/master/doc/list.md)
 
