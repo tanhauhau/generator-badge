@@ -8,7 +8,7 @@
   },
   "preferGlobal": true,
   "scripts": {
-    "test": "istanbul cover --include-all-sources jasmine-node spec"
+    "test": "istanbul cover --include-all-sources node_modules/jasmine-node/bin/jasmine-node spec"
   },
   "keywords": [
     "generate",
