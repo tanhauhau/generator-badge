@@ -1,6 +1,8 @@
 var spawn = require('child_process').spawn;
 var path = require('path');
-var fs = require('fs');
+var fs = require('fs'),
+ Promise = require('bluebird'),
+  unlink = Promise.promisify(fs.unlink);
 
 module.exports = {};
 module.exports.prepare = function(template, filename, args, cwd){
@@ -30,4 +32,29 @@ module.exports.prepare = function(template, filename, args, cwd){
         });
         rs.pipe(ws);
     };
+};
+module.exports.postpare = function(from, to, del){
+    return function(done){
+        var rs = fs.createReadStream(from);
+        rs.on('error', function(e){
+            console.log('!! Error: !! ' + e);
+            done();
+        });
+        var ws = fs.createWriteStream(to);
+        ws.on('error', function(e){
+            console.log('!! Error: !! ' + e);
+            done();
+        });
+        ws.on('close', function(){
+            Promise.map(del || [], function(f){
+                return unlink(f);
+            })
+            .then(function(){
+                done();
+            }, function(){
+                done();
+            });
+        });
+        rs.pipe(ws);
+    }
 };
