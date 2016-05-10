@@ -8,7 +8,7 @@
   },
   "preferGlobal": true,
   "scripts": {
-    "test": "jasmine-node spec/"
+    "test": "istanbul cover --include-all-sources jasmine-node spec"
   },
   "keywords": [
     "generate",
@@ -44,6 +44,7 @@
     "configstore": "^2.0.0",
     "find-up-glob": "^1.0.0",
     "inquirer": "^1.0.2",
+    "istanbul": "^0.4.3",
     "lodash": "^4.11.1",
     "meow": "^3.7.0",
     "parse-git-config": "^0.4.2",
