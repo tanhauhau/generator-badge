@@ -49,11 +49,11 @@
     "parse-git-config": "^0.4.2",
     "parse-github-url": "^0.3.1",
     "read-pkg-up": "^1.0.1",
+    "read-yaml": "^1.0.0",
     "repeating": "^2.0.1",
     "through2": "^2.0.1",
     "trim-newlines": "^1.0.0",
-    "write-file-atomic": "^1.1.4",
-    "yaml": "^0.3.0"
+    "write-file-atomic": "^1.1.4"
   },
   "devDependencies": {
     "jasmine-node": "^1.14.5"
